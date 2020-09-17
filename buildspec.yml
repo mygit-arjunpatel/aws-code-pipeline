@@ -2,14 +2,14 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      -echo "Enetred the prebuild phase"
+      - echo "Enetred the prebuild phase"
   build:
     commands:
-      -echo "Entered the build phase"
-      -mvn clean prepare-package war:explode
+      - echo "Entered the build phase"
+      - mvn clean prepare-package war:explode
   post_build:
     commands:
-      -echo "Entered the post build phase"
+      - echo "Entered the post build phase"
 artifact:
   files:
-    -target/beanstalk.example-0.0.1-SNAPSHOT.war
+    - target/beanstalk.example-0.0.1-SNAPSHOT.war
