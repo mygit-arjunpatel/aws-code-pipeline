@@ -1,0 +1,15 @@
+version: 0.2
+phases:
+  pre-build:
+    command:
+      -echo "Enetred the prebuild phase"
+  build:
+    command:
+      -echo "Entered the build phase"
+      -mvn clean prepare-package war:explode
+  post-build:
+    command:
+      -echo "Entered the post build phase"
+artifact:
+  files:
+    -target/beanstalk.example-0.0.1-SNAPSHOT.war
