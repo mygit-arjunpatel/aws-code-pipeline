@@ -1,14 +1,14 @@
 version: 0.2
 phases:
   pre-build:
-    command:
+    commands:
       -echo "Enetred the prebuild phase"
   build:
-    command:
+    commands:
       -echo "Entered the build phase"
       -mvn clean prepare-package war:explode
   post-build:
-    command:
+    commands:
       -echo "Entered the post build phase"
 artifact:
   files:
